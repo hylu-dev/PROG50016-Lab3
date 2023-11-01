@@ -5,5 +5,5 @@ int main()
 {
 	Engine::Instance().Initialize();
 	Engine::Instance().GameLoop();
-	Engine::Instaice().Destroy();
+	Engine::Instance().Destroy();
 }

@@ -1,7 +1,9 @@
 #include "Engine.h"
 
-Engine& Engine::Initialize() const {
+Engine* Engine::instance = nullptr;
 
+Engine& Engine::Initialize() const {
+	return Engine;
 }
 
 void Engine::GameLoop() {
