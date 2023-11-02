@@ -26,7 +26,7 @@ public:
 		}
 	}
 
-	Engine& Initialize() const;
+	void Initialize();
 
 	void GameLoop();
 

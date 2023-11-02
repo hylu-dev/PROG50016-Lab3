@@ -2,8 +2,8 @@
 
 Engine* Engine::instance = nullptr;
 
-Engine& Engine::Initialize() const {
-	return Engine;
+void Engine::Initialize() {
+
 }
 
 void Engine::GameLoop() {
