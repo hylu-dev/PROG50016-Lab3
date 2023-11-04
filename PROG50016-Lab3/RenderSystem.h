@@ -4,6 +4,7 @@
 #define _RENDER_SYSTEM_H_
 
 #include <string>
+#include "SDL.h"
 
 class Engine;
 
@@ -11,6 +12,8 @@ class RenderSystem final {
 private:
 	static RenderSystem* instance;
 
+	SDL_Window* window = nullptr;
+	SDL_Renderer* renderer = nullptr;
 	std::string name = "";
 	int width = 0;
 	int height = 0;

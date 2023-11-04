@@ -2,6 +2,8 @@
 #include "Entity.h"
 #include "Scene.h"
 
+SceneManager* SceneManager::instance = nullptr;
+
 void SceneManager::Initialize() {
 
 }
