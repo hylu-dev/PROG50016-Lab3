@@ -39,6 +39,11 @@ void SceneManager::RemoveEntity(Entity* _entity) {
 }
 
 void SceneManager::SetActiveScene(int _id) {
+	for (auto& _scene : scenes) {
+		if (_scene->id == _id) {
+			activeScene = _scene;
+		}
+	}
 }
 
 Entity* SceneManager::FindEntityById(int id) {

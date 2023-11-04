@@ -28,5 +28,5 @@ Component* Entity::CreateComponent(std::string _componentType) {
 }
 
 void Entity::RemoveComponent(Component* _component) {
-
+	components.remove(_component);
 }
