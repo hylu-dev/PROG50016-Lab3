@@ -11,7 +11,7 @@ class SceneManager;
 
 class Scene {
 private:
-	std::list<Entity> entities;
+	std::list<Entity*> entities;
 	std::string name = "";
 	int id = 0;
 

@@ -6,11 +6,17 @@ void Scene::Initialize() {
 }
 
 void Scene::Destroy() {
-
+	for (auto& _entity : entities) {
+		entities.remove(_entity);
+		_entity->Destroy();
+		delete _entity;
+	}
 }
 
 void Scene::Update() {
-
+	for (auto& _entity : entities) {
+		_entity->Update();
+	}
 }
 
 void Scene::Load(std::string fileName) {
@@ -22,9 +28,13 @@ Entity* Scene::CreateEntity() {
 }
 
 void Scene::RemoveEntity(Entity* _entity) {
-
+	entities.remove(_entity);
 }
 
 Entity* Scene::FindEntityById(int id) {
-	return new Entity;
+	for (auto& entity : entities) {
+		if (entity->GetId() == id) {
+			return entity;
+		}
+	}
 }

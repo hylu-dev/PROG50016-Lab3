@@ -9,11 +9,17 @@ void SceneManager::Initialize() {
 }
 
 void SceneManager::Destroy() {
-
+	for (auto& _scene : scenes) {
+		scenes.remove(_scene);
+		_scene->Destroy();
+		delete _scene;
+	}
 }
 
 void SceneManager::Update() {
-
+	for (auto& _scene : scenes) {
+		_scene->Update();
+	}
 }
 
 void SceneManager::AddScene(std::string _fileName) {
@@ -29,11 +35,10 @@ Entity* SceneManager::CreateEntity() {
 }
 
 void SceneManager::RemoveEntity(Entity* _entity) {
-
+	activeScene->RemoveEntity(_entity);
 }
 
 void SceneManager::SetActiveScene(int _id) {
-
 }
 
 Entity* SceneManager::FindEntityById(int id) {

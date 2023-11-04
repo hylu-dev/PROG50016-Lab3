@@ -21,12 +21,12 @@ protected:
 
 	void Initialize() override;
 	void Destroy() override;
+	void Update();
 	
 public:
 	void Load() override;
 	Component* CreateComponent(std::string _componentType);
 	void RemoveComponent(Component* _component);
-
 };
 
 #endif

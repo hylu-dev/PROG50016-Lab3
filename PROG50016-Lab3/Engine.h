@@ -9,6 +9,8 @@ class Engine final {
 private:
 	static Engine* instance;
 
+	bool quit = false;
+
 public:
 	static Engine& Instance() {
 		if (instance == nullptr) {
@@ -17,18 +19,13 @@ public:
 		return *instance;
 	}
 
-	void Destroy()
-	{
-		if (instance != nullptr)
-		{
-			delete instance;
-			instance = nullptr;
-		}
-	}
+	void Destroy();
 
 	void Initialize();
 
 	void GameLoop();
+
+	void Quit() { quit = true; }
 
 private:
 	void Load();

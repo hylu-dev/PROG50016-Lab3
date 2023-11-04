@@ -6,7 +6,17 @@ void Entity::Initialize() {
 }
 
 void Entity::Destroy() {
+	for (auto& _component : components) {
+		components.remove(_component);
+		_component->Destroy();
+		delete _component;
+	}
+}
 
+void Entity::Update() {
+	for (auto& _component : components) {
+		_component->Update();
+	}
 }
 
 void Entity::Load() {
