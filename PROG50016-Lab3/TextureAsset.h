@@ -11,7 +11,7 @@ protected:
 	~TextureAsset() = default;
 
 public:
-	void Load() override;
+	void Load(json::JSON document) override;
 };
 
 #endif

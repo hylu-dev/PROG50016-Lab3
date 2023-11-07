@@ -3,9 +3,10 @@
 #ifndef _COMPONENT_H_
 #define _COMPONENT_H_
 
+#include "Object.h"
 class Entity;
 
-class Component {
+class Component : Object {
 private:
 	friend class Entity;
 
@@ -13,12 +14,12 @@ protected:
 	Component() = default;
 	virtual ~Component() = default;
 
-	virtual void Initialize();
-	virtual void Destroy();
-	virtual void Update();
+	void Initialize() override;
+	void Destroy() override;
+	void Update();
 	
 public:
-	virtual void Load();
+	void Load(json::JSON document) override;
 };
 
 #endif

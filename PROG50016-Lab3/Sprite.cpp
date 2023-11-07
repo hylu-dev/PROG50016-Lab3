@@ -1,6 +1,6 @@
 #include "Sprite.h"
 
-void Sprite::Load() {
+void Sprite::Load(json::JSON document) {
 
 }
 

@@ -19,7 +19,7 @@ void Entity::Update() {
 	}
 }
 
-void Entity::Load() {
+void Entity::Load(json::JSON document) {
 
 }
 

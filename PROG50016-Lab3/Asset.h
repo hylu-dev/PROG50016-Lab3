@@ -11,7 +11,7 @@ protected:
 	~Asset() = default;
 
 public:
-	virtual void Load() override;
+	virtual void Load(json::JSON document) override;
 };
 
 #endif

@@ -24,7 +24,7 @@ protected:
 	void Update();
 	
 public:
-	void Load() override;
+	void Load(json::JSON document) override;
 	Component* CreateComponent(std::string _componentType);
 	void RemoveComponent(Component* _component);
 };

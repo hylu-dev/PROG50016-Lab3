@@ -19,7 +19,7 @@ void Scene::Update() {
 	}
 }
 
-void Scene::Load(std::string fileName) {
+void Scene::Load(json::JSON document) {
 
 }
 
@@ -37,4 +37,5 @@ Entity* Scene::FindEntityById(int id) {
 			return entity;
 		}
 	}
+	return nullptr;
 }

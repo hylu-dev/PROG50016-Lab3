@@ -3,7 +3,9 @@
 #ifndef _RENDER_SYSTEM_H_
 #define _RENDER_SYSTEM_H_
 
+#include "IRenderable.h"
 #include <string>
+#include <list>
 #include "SDL.h"
 
 class Engine;
@@ -18,6 +20,7 @@ private:
 	int width = 1280;
 	int height = 720;
 	bool fullscreen = false;
+	std::list<IRenderable*> renderables;
 
 	friend class Engine;
 

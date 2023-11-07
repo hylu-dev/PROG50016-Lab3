@@ -1,5 +1,5 @@
 #include "TextureAsset.h"
 
-void TextureAsset::Load() {
+void TextureAsset::Load(json::JSON document) {
 
 }

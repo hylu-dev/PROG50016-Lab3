@@ -1,5 +1,5 @@
 #include "Asset.h"
 
-void Asset::Load() {
+void Asset::Load(json::JSON document) {
 
 }

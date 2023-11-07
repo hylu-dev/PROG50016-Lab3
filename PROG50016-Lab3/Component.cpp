@@ -12,6 +12,6 @@ void Component::Update() {
 
 }
 
-void Component::Load() {
+void Component::Load(json::JSON document) {
 
 }

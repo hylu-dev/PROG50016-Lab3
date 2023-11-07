@@ -3,6 +3,7 @@
 #ifndef _SCENE_H_
 #define _SCENE_H_
 
+#include "json.h"
 #include <list>
 #include <string>
 
@@ -21,7 +22,7 @@ protected:
 	void Initialize();
 	void Destroy();
 	void Update();
-	void Load(std::string fileName);
+	void Load(json::JSON document);
 	
 public:
 	Entity* CreateEntity();

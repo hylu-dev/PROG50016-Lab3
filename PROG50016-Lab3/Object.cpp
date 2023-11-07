@@ -8,6 +8,6 @@ void Object::Destroy() {
 
 }
 
-void Object::Load() {
+void Object::Load(json::JSON document) {
 
 }

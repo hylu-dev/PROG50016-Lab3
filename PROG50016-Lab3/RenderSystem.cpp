@@ -21,6 +21,10 @@ void RenderSystem::Destroy() {
 void RenderSystem::Update() {
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 	SDL_RenderClear(renderer);
+	for (auto& renderable : renderables) {
+		renderable->Render();
+	}
+
 	SDL_RenderPresent(renderer);
 }
 

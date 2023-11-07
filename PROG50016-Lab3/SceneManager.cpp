@@ -47,5 +47,11 @@ void SceneManager::SetActiveScene(int _id) {
 }
 
 Entity* SceneManager::FindEntityById(int id) {
-	return activeScene->FindEntityById(id);
+	for (auto& scene : scenes) {
+		Entity* result = scene->FindEntityById(id);
+		if (result != nullptr) {
+			return result;
+		}
+	}
+	return nullptr;
 }

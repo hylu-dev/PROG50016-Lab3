@@ -10,7 +10,7 @@ class Sprite final : public Component, public IRenderable {
 public:
 	Sprite() = default;
 	
-	void Load();
+	void Load(json::JSON document);
 
 protected:
 	void Destroy();
