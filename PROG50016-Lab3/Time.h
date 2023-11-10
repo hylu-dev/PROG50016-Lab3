@@ -21,16 +21,20 @@ public:
 			instance = nullptr;
 		}
 	}
-
-	inline void Update();
-
 	inline float DeltaTime() { return deltaTime.count(); };
 
 	inline float TotalTime() { return totalTime.count(); };
 
 	unsigned int FrameCount() { return frameCount; };
 
+protected:
+	inline void Initialize();
+
+	inline void Update();
+
 private:
+	friend class Engine;
+
 	int frameCount = 0;
 	std::chrono::duration<float> deltaTime = std::chrono::duration<float>(0.0f);
 	std::chrono::duration<float> totalTime = std::chrono::duration<float>(0.0f);

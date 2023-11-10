@@ -31,7 +31,7 @@ public:
 		}
 		return *instance;
 	}
-
+protected:
 	void Initialize();
 	void Destroy();
 	void Update();
